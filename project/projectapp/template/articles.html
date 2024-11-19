@@ -1,0 +1,16 @@
+
+
+{% block content %}
+    <p>title: {{ article.title }}</p>
+    <p>description: {{ article.description }}</p>
+    <p>create date: {{ article.create_date }}</p>
+    <p>is_published: {{ article.is_published }}</p>
+    <p>views: {{ article.views }}</p>
+    {% endfor %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+    </form>
+
+{% endblock%}
